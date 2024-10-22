@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-// Middleware to parse JSON bodies
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -9,8 +9,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.status(200).json({  // Corrected this line
-         success: true,    // Fixed typo: 'sucess' to 'success'
+    res.status(200).json({  
+         success: true,    
          msg: req.body.msg,
     });
 });
